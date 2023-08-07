@@ -10,7 +10,7 @@ async function connectoDb(){
         console.log('DB is connected!');
         module.exports = client;
         const app = require('./app');
-        app.listen(8112, () => {
+        app.listen(process.env.PORT, () => {
           console.log("Server is listening on 8112!");
         });
       } catch (err) {
